@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  app:
+    image: 'online_store:latest'
+    build:
+      context: .
+    container_name: app
+    depends_on:
+      - db
+    environment:
+      - SPRING_DATASOURCE_URL=${DB_URL}
+      - SPRING_DATASOURCE_JDBC-URL=${DB_URL}
+      - SPRING_DATASOURCE_USERNAME=${DB_USER_NAME}
+      - SPRING_DATASOURCE_PASSWORD=${DB_PASSWORD}
+
+    ports:
+      - "8080:8080"
+
+
+  db:
+    image: postgres:15-alpine
+    user: postgres
+    container_name: db
+    restart: always
+
+    ports:
+      - "5433:5432"
+    environment:
+      POSTGRES_USER: ${DB_USER_NAME}
+      POSTGRES_DB: ${DB_NAME}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+

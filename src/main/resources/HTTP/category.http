@@ -1,0 +1,44 @@
+### 1. Category create qilish
+POST http://localhost:8080/api/v1/category
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3Mjg4MTI5NjgsImlkIjoiOGNiMWViOGUtYmQyZS00NDEzLWI0ZDEtYWRiMzUyNTViMTIxIiwidXNlcm5hbWUiOiIrOTk4OTQ1MDIyMTQ3Iiwicm9sZSI6IlJPTEVfQURNSU4iLCJyZWZyZXNoVG9rZW4iOmZhbHNlLCJleHAiOjE3Mjg4OTkzNjgsImlzcyI6IlN0YWRpdW0ifQ.E3K3upUxtg0ZcmqhNlVi5d0TZF_XWNIoL5N55tgzJ-VrFKlmmwZ8A6EOR2eOu_RclOFGZyPcRWxpmp6Tj-BvaQ
+Content-Type: application/json
+
+{
+  "name": "Maxsus avtomabil",
+  "parentId":1
+}
+
+### 2. Update category
+PUT http://localhost:8080/api/v1/category
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3Mjg0NTYwNzgsImlkIjoiOGNiMWViOGUtYmQyZS00NDEzLWI0ZDEtYWRiMzUyNTViMTIxIiwidXNlcm5hbWUiOiIrOTk4OTQ1MDIyMTQ3Iiwicm9sZSI6IlJPTEVfQURNSU4iLCJyZWZyZXNoVG9rZW4iOmZhbHNlLCJleHAiOjE3Mjg1NDI0NzgsImlzcyI6IlN0YWRpdW0ifQ.5_jgAQMTbXbXw8wjmar6Zgr57xidrWs4maLvH2yU0gNWNTRCDx--WPa8JwFr4GZpxfMeztPeZT4ErdaU3z0LGQ
+Accept-Language: UZ
+Content-Type: application/json
+
+{
+"id": 2,
+"name": "Yuk Avtomabil",
+"parentId": 1
+}
+
+### 3. Category delete
+DELETE http://localhost:8080/api/v1/category/7
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3Mjg0NTYwNzgsImlkIjoiOGNiMWViOGUtYmQyZS00NDEzLWI0ZDEtYWRiMzUyNTViMTIxIiwidXNlcm5hbWUiOiIrOTk4OTQ1MDIyMTQ3Iiwicm9sZSI6IlJPTEVfQURNSU4iLCJyZWZyZXNoVG9rZW4iOmZhbHNlLCJleHAiOjE3Mjg1NDI0NzgsImlzcyI6IlN0YWRpdW0ifQ.5_jgAQMTbXbXw8wjmar6Zgr57xidrWs4maLvH2yU0gNWNTRCDx--WPa8JwFr4GZpxfMeztPeZT4ErdaU3z0LGQ
+
+
+### 4. Category get by id
+GET http://localhost:8080/api/v1/category/2
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3Mjg0NTYwNzgsImlkIjoiOGNiMWViOGUtYmQyZS00NDEzLWI0ZDEtYWRiMzUyNTViMTIxIiwidXNlcm5hbWUiOiIrOTk4OTQ1MDIyMTQ3Iiwicm9sZSI6IlJPTEVfQURNSU4iLCJyZWZyZXNoVG9rZW4iOmZhbHNlLCJleHAiOjE3Mjg1NDI0NzgsImlzcyI6IlN0YWRpdW0ifQ.5_jgAQMTbXbXw8wjmar6Zgr57xidrWs4maLvH2yU0gNWNTRCDx--WPa8JwFr4GZpxfMeztPeZT4ErdaU3z0LGQ
+
+
+### 5. Category page
+GET http://localhost:8080/api/v1/category/page
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3Mjg4MTI5NjgsImlkIjoiOGNiMWViOGUtYmQyZS00NDEzLWI0ZDEtYWRiMzUyNTViMTIxIiwidXNlcm5hbWUiOiIrOTk4OTQ1MDIyMTQ3Iiwicm9sZSI6IlJPTEVfQURNSU4iLCJyZWZyZXNoVG9rZW4iOmZhbHNlLCJleHAiOjE3Mjg4OTkzNjgsImlzcyI6IlN0YWRpdW0ifQ.E3K3upUxtg0ZcmqhNlVi5d0TZF_XWNIoL5N55tgzJ-VrFKlmmwZ8A6EOR2eOu_RclOFGZyPcRWxpmp6Tj-BvaQ
+Content-Type: application/json
+
+{
+  "name": null,
+  "parentId": 1
+}
+
+
+

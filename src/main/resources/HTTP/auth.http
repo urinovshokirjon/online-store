@@ -1,0 +1,44 @@
+###  Profile registration Sms
+POST http://localhost:8080/api/v1/auth/register
+Content-Type: application/json
+
+{
+  "name": "Shokirjon",
+  "surname": "Urinov",
+  "phone": "+998941785150",
+  "password": "12345",
+  "role": "ROLE_USER"
+}
+
+### Profile login
+POST http://localhost:8080/api/v1/auth/login
+Content-Type: application/json
+Accept-Language: UZ
+
+{
+  "username": "+998945022147",
+  "password": "12345"
+}
+
+### Profileni jo'natilgan sms kodi orqali tekshirish
+POST http://localhost:8080/api/v1/auth/verify-sms
+Content-Type: application/json
+
+{
+  "smsCode": "12746",
+  "phone": "+998941785150"
+}
+
+### Parol esdan chiqib qolganda sms kod olish
+POST http://localhost:8080/auth/mobile/client/v1/account/verification/resendSma/+998941785150
+Content-Type: application/x-www-form-urlencoded
+
+### Parol esdan chiqib qolganda sms kodni olib yangi parol o'rnatish
+POST http://localhost:8080/api/v1/auth/forget-update-password
+Content-Type: application/json
+
+{
+  "phone": "+998941785150",
+  "smsCode": "75240",
+  "newPassword": "123"
+}

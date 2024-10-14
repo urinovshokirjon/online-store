@@ -1,0 +1,13 @@
+POST http://localhost:8080/api/v1/attach/upload
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3Mjg4MTI5NjgsImlkIjoiOGNiMWViOGUtYmQyZS00NDEzLWI0ZDEtYWRiMzUyNTViMTIxIiwidXNlcm5hbWUiOiIrOTk4OTQ1MDIyMTQ3Iiwicm9sZSI6IlJPTEVfQURNSU4iLCJyZWZyZXNoVG9rZW4iOmZhbHNlLCJleHAiOjE3Mjg4OTkzNjgsImlzcyI6IlN0YWRpdW0ifQ.E3K3upUxtg0ZcmqhNlVi5d0TZF_XWNIoL5N55tgzJ-VrFKlmmwZ8A6EOR2eOu_RclOFGZyPcRWxpmp6Tj-BvaQ
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+
+--WebAppBoundary
+Content-Disposition: form-data; name="file"; filename="Tez yordam.jpg"
+
+< C:\Users\Urinov Shokirjon\Desktop\rasmlar\Tez yordam.jpg
+
+
+###
+GET http://localhost:8080/api/v1/attach/open/952965d7-fdf7-4434-8df9-6fbf0fee922d.jpg
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3Mjg1NTI4NTQsImlkIjoiYmM2Y2ZiYzEtMTU3Yy00ODRjLTlkNzgtN2EwZTBlNWI5YmI3IiwidXNlcm5hbWUiOiIrOTk4OTQxNzg1MTUwIiwicm9sZSI6IlJPTEVfVVNFUiIsInJlZnJlc2hUb2tlbiI6ZmFsc2UsImV4cCI6MTcyODYzOTI1NSwiaXNzIjoiU3RhZGl1bSJ9.q1NCAaBeyGOADuyY3FAZH40IgXgfdw4Xsmvtn1Fo7OIrgmZe6yqpOeAQsJ4mTnm-SocEpDWGJmSlT_s7FSGUWg

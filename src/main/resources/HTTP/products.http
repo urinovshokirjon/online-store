@@ -1,0 +1,35 @@
+### create
+POST http://localhost:8080/api/v1/products
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3Mjg4MTI5NjgsImlkIjoiOGNiMWViOGUtYmQyZS00NDEzLWI0ZDEtYWRiMzUyNTViMTIxIiwidXNlcm5hbWUiOiIrOTk4OTQ1MDIyMTQ3Iiwicm9sZSI6IlJPTEVfQURNSU4iLCJyZWZyZXNoVG9rZW4iOmZhbHNlLCJleHAiOjE3Mjg4OTkzNjgsImlzcyI6IlN0YWRpdW0ifQ.E3K3upUxtg0ZcmqhNlVi5d0TZF_XWNIoL5N55tgzJ-VrFKlmmwZ8A6EOR2eOu_RclOFGZyPcRWxpmp6Tj-BvaQ
+Content-Type: application/json
+
+{
+  "name": "Ford Tez yordam",
+  "price": 12000,
+  "brend": "Ford",
+  "description": "Tez yordam mashina",
+  "categoryId": 4,
+  "status": "EXISTS",
+  "attachIds":  ["3f974bb9-ff82-43ca-9846-dce3e18fc201.jpg"]
+}
+
+### Get by id
+GET http://localhost:8080/api/v1/products/1
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3Mjg1NDI1MzAsImlkIjoiOGNiMWViOGUtYmQyZS00NDEzLWI0ZDEtYWRiMzUyNTViMTIxIiwidXNlcm5hbWUiOiIrOTk4OTQ1MDIyMTQ3Iiwicm9sZSI6IlJPTEVfQURNSU4iLCJyZWZyZXNoVG9rZW4iOmZhbHNlLCJleHAiOjE3Mjg2Mjg5MzAsImlzcyI6IlN0YWRpdW0ifQ.9IhjRXlxrVZIkQZrtXIvx7FhURNgO2mLbcb_pckrvSLnFbgWRKJs-8HXVSNvkFUXA3WyBTEverpSreAom_bqjw
+Content-Type: application/json
+
+
+
+### Get filter
+GET http://localhost:8080/api/v1/products
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3Mjg4MTI5NjgsImlkIjoiOGNiMWViOGUtYmQyZS00NDEzLWI0ZDEtYWRiMzUyNTViMTIxIiwidXNlcm5hbWUiOiIrOTk4OTQ1MDIyMTQ3Iiwicm9sZSI6IlJPTEVfQURNSU4iLCJyZWZyZXNoVG9rZW4iOmZhbHNlLCJleHAiOjE3Mjg4OTkzNjgsImlzcyI6IlN0YWRpdW0ifQ.E3K3upUxtg0ZcmqhNlVi5d0TZF_XWNIoL5N55tgzJ-VrFKlmmwZ8A6EOR2eOu_RclOFGZyPcRWxpmp6Tj-BvaQ
+Content-Type: application/json
+
+{
+  "name": "Truck",
+  "price": null,
+  "brend": null,
+  "categoryId": null,
+  "parentId": null,
+  "status": "EXISTS"
+}

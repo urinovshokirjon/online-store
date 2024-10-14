@@ -1,0 +1,51 @@
+### 1.District create
+POST http://localhost:8080/district/adm/create
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MjYwMzM5NzAsImlkIjoiOGNiMWViOGUtYmQyZS00NDEzLWI0ZDEtYWRiMzUyNTViMTIxIiwidXNlcm5hbWUiOiIrOTk4OTQ1MDIyMTQ3Iiwicm9sZSI6IlJPTEVfQURNSU4iLCJyZWZyZXNoVG9rZW4iOmZhbHNlLCJleHAiOjE3MjYxMjAzNzAsImlzcyI6IlN0YWRpdW0ifQ.rQaUQWdL81ZI1Gwl0YC5q_ezK6CKA6kiVRcefGrkWm_yReZjcz_FWQHiU8CVl44LksjA_X_yoliyDQMTFs3dqQ
+Accept-Language: UZ
+Content-Type: application/json
+
+{
+  "regionId": 3,
+  "nameUz": "Xonabod",
+  "nameEn": "Xonabod",
+  "nameRu": "Xonabod",
+  "county": "Xonabod shahar"
+}
+
+### 2.District update
+PUT http://localhost:8080/district/adm/update/1
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MjYwMzM5NzAsImlkIjoiOGNiMWViOGUtYmQyZS00NDEzLWI0ZDEtYWRiMzUyNTViMTIxIiwidXNlcm5hbWUiOiIrOTk4OTQ1MDIyMTQ3Iiwicm9sZSI6IlJPTEVfQURNSU4iLCJyZWZyZXNoVG9rZW4iOmZhbHNlLCJleHAiOjE3MjYxMjAzNzAsImlzcyI6IlN0YWRpdW0ifQ.rQaUQWdL81ZI1Gwl0YC5q_ezK6CKA6kiVRcefGrkWm_yReZjcz_FWQHiU8CVl44LksjA_X_yoliyDQMTFs3dqQ
+Accept-Language: UZ
+Content-Type: application/json
+
+{
+  "regionId": 3,
+  "nameUz": "Baliqchi",
+  "nameEn": "Fisherman",
+  "nameRu": "Рыбак",
+  "county": "Baliqchi shahar"
+}
+### 3. District list (ADMIN)
+GET http://localhost:8080/district/adm/list
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MjYwMzM5NzAsImlkIjoiOGNiMWViOGUtYmQyZS00NDEzLWI0ZDEtYWRiMzUyNTViMTIxIiwidXNlcm5hbWUiOiIrOTk4OTQ1MDIyMTQ3Iiwicm9sZSI6IlJPTEVfQURNSU4iLCJyZWZyZXNoVG9rZW4iOmZhbHNlLCJleHAiOjE3MjYxMjAzNzAsImlzcyI6IlN0YWRpdW0ifQ.rQaUQWdL81ZI1Gwl0YC5q_ezK6CKA6kiVRcefGrkWm_yReZjcz_FWQHiU8CVl44LksjA_X_yoliyDQMTFs3dqQ
+Accept-Language: UZ
+
+### 4. District delete (ADMIN)
+DELETE http://localhost:8080/district/adm/delete/2
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MjYwMzM5NzAsImlkIjoiOGNiMWViOGUtYmQyZS00NDEzLWI0ZDEtYWRiMzUyNTViMTIxIiwidXNlcm5hbWUiOiIrOTk4OTQ1MDIyMTQ3Iiwicm9sZSI6IlJPTEVfQURNSU4iLCJyZWZyZXNoVG9rZW4iOmZhbHNlLCJleHAiOjE3MjYxMjAzNzAsImlzcyI6IlN0YWRpdW0ifQ.rQaUQWdL81ZI1Gwl0YC5q_ezK6CKA6kiVRcefGrkWm_yReZjcz_FWQHiU8CVl44LksjA_X_yoliyDQMTFs3dqQ
+Accept-Language: UZ
+
+###  5. District By Lang
+GET http://localhost:8080/district/lang
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MjYwMzM5NzAsImlkIjoiOGNiMWViOGUtYmQyZS00NDEzLWI0ZDEtYWRiMzUyNTViMTIxIiwidXNlcm5hbWUiOiIrOTk4OTQ1MDIyMTQ3Iiwicm9sZSI6IlJPTEVfQURNSU4iLCJyZWZyZXNoVG9rZW4iOmZhbHNlLCJleHAiOjE3MjYxMjAzNzAsImlzcyI6IlN0YWRpdW0ifQ.rQaUQWdL81ZI1Gwl0YC5q_ezK6CKA6kiVRcefGrkWm_yReZjcz_FWQHiU8CVl44LksjA_X_yoliyDQMTFs3dqQ
+Accept-Language: RU
+
+### 6. District Region  By Lang
+GET http://localhost:8080/district/region-lang/3
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MjYwMzM5NzAsImlkIjoiOGNiMWViOGUtYmQyZS00NDEzLWI0ZDEtYWRiMzUyNTViMTIxIiwidXNlcm5hbWUiOiIrOTk4OTQ1MDIyMTQ3Iiwicm9sZSI6IlJPTEVfQURNSU4iLCJyZWZyZXNoVG9rZW4iOmZhbHNlLCJleHAiOjE3MjYxMjAzNzAsImlzcyI6IlN0YWRpdW0ifQ.rQaUQWdL81ZI1Gwl0YC5q_ezK6CKA6kiVRcefGrkWm_yReZjcz_FWQHiU8CVl44LksjA_X_yoliyDQMTFs3dqQ
+Accept-Language: RU
+
+### Change access modifier
+GET http://localhost:8080/district/district-lang/1
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MjYwMzM5NzAsImlkIjoiOGNiMWViOGUtYmQyZS00NDEzLWI0ZDEtYWRiMzUyNTViMTIxIiwidXNlcm5hbWUiOiIrOTk4OTQ1MDIyMTQ3Iiwicm9sZSI6IlJPTEVfQURNSU4iLCJyZWZyZXNoVG9rZW4iOmZhbHNlLCJleHAiOjE3MjYxMjAzNzAsImlzcyI6IlN0YWRpdW0ifQ.rQaUQWdL81ZI1Gwl0YC5q_ezK6CKA6kiVRcefGrkWm_yReZjcz_FWQHiU8CVl44LksjA_X_yoliyDQMTFs3dqQ
+Accept-Language: EN

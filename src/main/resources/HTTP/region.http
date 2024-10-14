@@ -1,0 +1,38 @@
+### 1.Regoin create
+POST http://localhost:8080/region/adm/create
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MjYwMzM5NzAsImlkIjoiOGNiMWViOGUtYmQyZS00NDEzLWI0ZDEtYWRiMzUyNTViMTIxIiwidXNlcm5hbWUiOiIrOTk4OTQ1MDIyMTQ3Iiwicm9sZSI6IlJPTEVfQURNSU4iLCJyZWZyZXNoVG9rZW4iOmZhbHNlLCJleHAiOjE3MjYxMjAzNzAsImlzcyI6IlN0YWRpdW0ifQ.rQaUQWdL81ZI1Gwl0YC5q_ezK6CKA6kiVRcefGrkWm_yReZjcz_FWQHiU8CVl44LksjA_X_yoliyDQMTFs3dqQ
+Accept-Language: UZ
+Content-Type: application/json
+
+{
+  "nameUz": "Andijon",
+  "nameEn": "Andijon",
+  "nameRu": "Andijon"
+}
+
+### 2. Regoin update
+PUT http://localhost:8080/region/adm/update/2
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MjYwMzM5NzAsImlkIjoiOGNiMWViOGUtYmQyZS00NDEzLWI0ZDEtYWRiMzUyNTViMTIxIiwidXNlcm5hbWUiOiIrOTk4OTQ1MDIyMTQ3Iiwicm9sZSI6IlJPTEVfQURNSU4iLCJyZWZyZXNoVG9rZW4iOmZhbHNlLCJleHAiOjE3MjYxMjAzNzAsImlzcyI6IlN0YWRpdW0ifQ.rQaUQWdL81ZI1Gwl0YC5q_ezK6CKA6kiVRcefGrkWm_yReZjcz_FWQHiU8CVl44LksjA_X_yoliyDQMTFs3dqQ
+Accept-Language: UZ
+Content-Type: application/json
+
+{
+  "nameUz": "Andijon",
+  "nameEn": "Andijon",
+  "nameRu": "Андижан"
+}
+
+### 3. Regoin list
+GET http://localhost:8080/region/adm/list
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MjYwMzM5NzAsImlkIjoiOGNiMWViOGUtYmQyZS00NDEzLWI0ZDEtYWRiMzUyNTViMTIxIiwidXNlcm5hbWUiOiIrOTk4OTQ1MDIyMTQ3Iiwicm9sZSI6IlJPTEVfQURNSU4iLCJyZWZyZXNoVG9rZW4iOmZhbHNlLCJleHAiOjE3MjYxMjAzNzAsImlzcyI6IlN0YWRpdW0ifQ.rQaUQWdL81ZI1Gwl0YC5q_ezK6CKA6kiVRcefGrkWm_yReZjcz_FWQHiU8CVl44LksjA_X_yoliyDQMTFs3dqQ
+Accept-Language: UZ
+
+### 4. Regoin delete
+DELETE http://localhost:8080/region/adm/delete/2
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MjYwMzM5NzAsImlkIjoiOGNiMWViOGUtYmQyZS00NDEzLWI0ZDEtYWRiMzUyNTViMTIxIiwidXNlcm5hbWUiOiIrOTk4OTQ1MDIyMTQ3Iiwicm9sZSI6IlJPTEVfQURNSU4iLCJyZWZyZXNoVG9rZW4iOmZhbHNlLCJleHAiOjE3MjYxMjAzNzAsImlzcyI6IlN0YWRpdW0ifQ.rQaUQWdL81ZI1Gwl0YC5q_ezK6CKA6kiVRcefGrkWm_yReZjcz_FWQHiU8CVl44LksjA_X_yoliyDQMTFs3dqQ
+Accept-Language: UZ
+
+
+### 5.Regoin lang
+GET http://localhost:8080/region/lang
+Accept-Language: UZ
