@@ -25,6 +25,7 @@ public abstract class OrderMapper {
     public abstract OrderResponse toDto(OrderEntity entity);
 
 
+    @Mapping(target = "productName", expression = "java(entity.getProduct().getName())" )
     public abstract OrderItemResponseDto toItemDto(OrderItemEntity entity);
 
 

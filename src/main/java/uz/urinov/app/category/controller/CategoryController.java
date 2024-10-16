@@ -45,14 +45,14 @@ public class CategoryController {
 
     // Category get by id
     @GetMapping("/{id}")
-    public ResponseEntity<ApiResponse<CategoryResponseDto>> get(@PathVariable Long id){
-        return ResponseEntity.ok().body(categoryService.get(id));
+    public ResponseEntity<ApiResponse<CategoryResponseDto>> getId(@PathVariable Long id){
+        return ResponseEntity.ok().body(categoryService.getId(id));
     }
 
     // Category filter list
     @GetMapping(CATEGORY_PAGE_URL)
-    public ResponseEntity<ApiResponse<CustomPage<CategoryResponseDto>>> getAll(@RequestBody CategoryFilter filter){
-        return ResponseEntity.ok().body(categoryService.getAll(filter));
+    public ResponseEntity<ApiResponse<CustomPage<CategoryResponseDto>>> getList(@RequestBody CategoryFilter filter){
+        return ResponseEntity.ok().body(categoryService.getList(filter));
     }
 
 

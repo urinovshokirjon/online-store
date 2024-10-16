@@ -1,16 +1,16 @@
 ### create
 POST http://localhost:8080/api/v1/products
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3Mjg4MTI5NjgsImlkIjoiOGNiMWViOGUtYmQyZS00NDEzLWI0ZDEtYWRiMzUyNTViMTIxIiwidXNlcm5hbWUiOiIrOTk4OTQ1MDIyMTQ3Iiwicm9sZSI6IlJPTEVfQURNSU4iLCJyZWZyZXNoVG9rZW4iOmZhbHNlLCJleHAiOjE3Mjg4OTkzNjgsImlzcyI6IlN0YWRpdW0ifQ.E3K3upUxtg0ZcmqhNlVi5d0TZF_XWNIoL5N55tgzJ-VrFKlmmwZ8A6EOR2eOu_RclOFGZyPcRWxpmp6Tj-BvaQ
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MjkwNDE4NzksImlkIjoiOGNiMWViOGUtYmQyZS00NDEzLWI0ZDEtYWRiMzUyNTViMTIxIiwidXNlcm5hbWUiOiIrOTk4OTQ1MDIyMTQ3Iiwicm9sZSI6IlJPTEVfQURNSU4iLCJyZWZyZXNoVG9rZW4iOmZhbHNlLCJleHAiOjE3MjkxMjgyNzksImlzcyI6IlN0YWRpdW0ifQ.ThXTvsKgGF93B8AUCfmYpTu5fxytmCafhboKFTHx5lj3zuIlSbLHHzj5j6t3lj9ZG3LFtdDLG0dBW6y99iX7BQ
 Content-Type: application/json
 
 {
-  "name": "Ford Tez yordam",
+  "name": "Tico",
   "price": 12000,
-  "brend": "Ford",
-  "description": "Tez yordam mashina",
-  "categoryId": 4,
+  "brend": "Chevrolet",
+  "description": "Legenda mashina",
+  "categoryId": 6,
   "status": "EXISTS",
-  "attachIds":  ["3f974bb9-ff82-43ca-9846-dce3e18fc201.jpg"]
+  "attachIds":  ["49ac95b4-dab9-4360-ae95-36f2ed267c81.jpeg"]
 }
 
 ### Get by id
@@ -22,14 +22,14 @@ Content-Type: application/json
 
 ### Get filter
 GET http://localhost:8080/api/v1/products
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3Mjg4MTI5NjgsImlkIjoiOGNiMWViOGUtYmQyZS00NDEzLWI0ZDEtYWRiMzUyNTViMTIxIiwidXNlcm5hbWUiOiIrOTk4OTQ1MDIyMTQ3Iiwicm9sZSI6IlJPTEVfQURNSU4iLCJyZWZyZXNoVG9rZW4iOmZhbHNlLCJleHAiOjE3Mjg4OTkzNjgsImlzcyI6IlN0YWRpdW0ifQ.E3K3upUxtg0ZcmqhNlVi5d0TZF_XWNIoL5N55tgzJ-VrFKlmmwZ8A6EOR2eOu_RclOFGZyPcRWxpmp6Tj-BvaQ
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MjkwNDE4NzksImlkIjoiOGNiMWViOGUtYmQyZS00NDEzLWI0ZDEtYWRiMzUyNTViMTIxIiwidXNlcm5hbWUiOiIrOTk4OTQ1MDIyMTQ3Iiwicm9sZSI6IlJPTEVfQURNSU4iLCJyZWZyZXNoVG9rZW4iOmZhbHNlLCJleHAiOjE3MjkxMjgyNzksImlzcyI6IlN0YWRpdW0ifQ.ThXTvsKgGF93B8AUCfmYpTu5fxytmCafhboKFTHx5lj3zuIlSbLHHzj5j6t3lj9ZG3LFtdDLG0dBW6y99iX7BQ
 Content-Type: application/json
 
 {
-  "name": "Truck",
+  "name": null,
   "price": null,
   "brend": null,
   "categoryId": null,
-  "parentId": null,
+  "parentId": 1,
   "status": "EXISTS"
 }

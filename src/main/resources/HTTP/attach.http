@@ -1,11 +1,11 @@
 POST http://localhost:8080/api/v1/attach/upload
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3Mjg4MTI5NjgsImlkIjoiOGNiMWViOGUtYmQyZS00NDEzLWI0ZDEtYWRiMzUyNTViMTIxIiwidXNlcm5hbWUiOiIrOTk4OTQ1MDIyMTQ3Iiwicm9sZSI6IlJPTEVfQURNSU4iLCJyZWZyZXNoVG9rZW4iOmZhbHNlLCJleHAiOjE3Mjg4OTkzNjgsImlzcyI6IlN0YWRpdW0ifQ.E3K3upUxtg0ZcmqhNlVi5d0TZF_XWNIoL5N55tgzJ-VrFKlmmwZ8A6EOR2eOu_RclOFGZyPcRWxpmp6Tj-BvaQ
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MjkwNDE4NzksImlkIjoiOGNiMWViOGUtYmQyZS00NDEzLWI0ZDEtYWRiMzUyNTViMTIxIiwidXNlcm5hbWUiOiIrOTk4OTQ1MDIyMTQ3Iiwicm9sZSI6IlJPTEVfQURNSU4iLCJyZWZyZXNoVG9rZW4iOmZhbHNlLCJleHAiOjE3MjkxMjgyNzksImlzcyI6IlN0YWRpdW0ifQ.ThXTvsKgGF93B8AUCfmYpTu5fxytmCafhboKFTHx5lj3zuIlSbLHHzj5j6t3lj9ZG3LFtdDLG0dBW6y99iX7BQ
 Content-Type: multipart/form-data; boundary=WebAppBoundary
 
 --WebAppBoundary
-Content-Disposition: form-data; name="file"; filename="Tez yordam.jpg"
+Content-Disposition: form-data; name="file"; filename="lacetti.jpeg"
 
-< C:\Users\Urinov Shokirjon\Desktop\rasmlar\Tez yordam.jpg
+< C:\Users\Urinov Shokirjon\Desktop\rasmlar\lacetti.jpeg
 
 
 ###

@@ -1,11 +1,16 @@
 package uz.urinov.app.product.spec;
 
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.Query;
 import jakarta.persistence.criteria.*;
 import org.springframework.data.jpa.domain.Specification;
 import uz.urinov.app.product.entity.ProductEntity;
 import uz.urinov.app.category.entity.CategoryEntity;
 import uz.urinov.base.spec.BaseSpec;
 import uz.urinov.base.spec.SearchCriteria;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class ProductSpecification extends BaseSpec<ProductEntity> {
 
@@ -19,6 +24,28 @@ public class ProductSpecification extends BaseSpec<ProductEntity> {
         super(criteria);
         this.criteria = criteria;
     }
+
+    public List<Long> findAllChildCategoryIds(Long parentId) {
+        EntityManager entityManager = EntityManagerProvider.getEntityManager();
+        List<Long> categoryIds = new ArrayList<>();
+
+        try {
+            Query nativeQuery = entityManager.createNativeQuery("SELECT c.id FROM categories as c WHERE c.parent_id = :parentId");
+            nativeQuery.setParameter("parentId", parentId);
+            List<Long> childIdList = nativeQuery.getResultList();
+            categoryIds.add(parentId);
+
+            for (Long childId : childIdList) {
+                categoryIds.addAll(findAllChildCategoryIds(childId));
+            }
+
+        } finally {
+            entityManager.close();
+        }
+
+        return categoryIds;
+    }
+
 
     @Override
     public Predicate toPredicate
@@ -34,9 +61,10 @@ public class ProductSpecification extends BaseSpec<ProductEntity> {
 
         // parentId bo'yicha filtr
         if (criteria.getKey().equals("parentId")) {
-            Join<CategoryEntity, ProductEntity> category = root.join("category");
-            Join<CategoryEntity, CategoryEntity> parentCategory = category.join("parent");
-            return builder.equal(parentCategory.get("id"), criteria.getValue());
+            List<Long> allChildCategoryIds = findAllChildCategoryIds((Long) criteria.getValue());
+//            Join<CategoryEntity, ProductEntity> category = root.join("category");
+//            Join<CategoryEntity, CategoryEntity> parentCategory = category.join("parent");
+            return root.get("categoryId").in(allChildCategoryIds);
         }
 
         return super.toPredicate(root, query, builder);

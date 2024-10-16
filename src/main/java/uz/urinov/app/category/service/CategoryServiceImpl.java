@@ -30,7 +30,7 @@ public class CategoryServiceImpl implements CategoryService {
     // Category create
     @Override
     public ApiResponse<CategoryResponseDto> create(CategoryCreateDto dto) {
-        getName(dto.getName());
+        checkName(dto.getName());
         if (dto.getParentId() != null) {
             getById(dto.getParentId());
         }
@@ -57,34 +57,32 @@ public class CategoryServiceImpl implements CategoryService {
     }
 
     @Override
-    public ApiResponse<CustomPage<CategoryResponseDto>> getAll(CategoryFilter filter) {
+    public ApiResponse<CustomPage<CategoryResponseDto>> getList(CategoryFilter filter) {
         CategorySpecification spec = filter.retrieveSpecification();
 
         Page<CategoryEntity> page = categoryRepository.findAll(spec.getSpecification(), filter.pageable());
 
-        return new ApiResponse<>(200,false,categoryMapper.toCustomPage(page));
+        return new ApiResponse<>(200, false, categoryMapper.toCustomPage(page));
     }
 
     // Category get by id
     @Override
-    public ApiResponse<CategoryResponseDto> get(Long id) {
+    public ApiResponse<CategoryResponseDto> getId(Long id) {
         CategoryEntity category = getById(id);
         return new ApiResponse<>(200, false, categoryMapper.toDto(category));
     }
 
 
-
-
     public CategoryEntity getById(Long id) {
         return categoryRepository.findById(id).orElseThrow(() -> {
-            throw new AppBadException("Error: category not found");
+            throw new AppBadException("Error: No category found for given id: " + id);
         });
     }
 
-    public void getName(String name) {
+    public void checkName(String name) {
         Optional<CategoryEntity> entityOptional = categoryRepository.findByNameIgnoreCase(name);
         if (entityOptional.isPresent()) {
-            throw new AppBadException("Category already exists");
+            throw new AppBadException("Error: No category found for given name: " + name);
         }
     }
 

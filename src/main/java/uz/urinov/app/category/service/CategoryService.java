@@ -20,9 +20,9 @@ public interface CategoryService {
 
     ApiResponse<CategoryResponseDto> update(CategoryUpdateDto dto);
 
-    ApiResponse<CategoryResponseDto> get(Long id);
+    ApiResponse<CategoryResponseDto> getId(Long id);
 
     ApiResponse<String> delete(Long id);
 
-    ApiResponse<CustomPage<CategoryResponseDto>> getAll(CategoryFilter filter);
+    ApiResponse<CustomPage<CategoryResponseDto>> getList(CategoryFilter filter);
 }
