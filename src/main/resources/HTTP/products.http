@@ -1,16 +1,16 @@
 ### create
 POST http://localhost:8080/api/v1/products
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MjkwNDE4NzksImlkIjoiOGNiMWViOGUtYmQyZS00NDEzLWI0ZDEtYWRiMzUyNTViMTIxIiwidXNlcm5hbWUiOiIrOTk4OTQ1MDIyMTQ3Iiwicm9sZSI6IlJPTEVfQURNSU4iLCJyZWZyZXNoVG9rZW4iOmZhbHNlLCJleHAiOjE3MjkxMjgyNzksImlzcyI6IlN0YWRpdW0ifQ.ThXTvsKgGF93B8AUCfmYpTu5fxytmCafhboKFTHx5lj3zuIlSbLHHzj5j6t3lj9ZG3LFtdDLG0dBW6y99iX7BQ
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MjkwNzM5ODIsImlkIjoiOGNiMWViOGUtYmQyZS00NDEzLWI0ZDEtYWRiMzUyNTViMTIxIiwidXNlcm5hbWUiOiIrOTk4OTQ1MDIyMTQ3Iiwicm9sZSI6IlJPTEVfQURNSU4iLCJyZWZyZXNoVG9rZW4iOmZhbHNlLCJleHAiOjE3MjkxNjAzODIsImlzcyI6IlN0YWRpdW0ifQ.RLNFLntmU3HcsEKt5klNyS1C3BV-pZ_ZKT4CdNSWT_yRcXrSD4s8Q6yLjlCgAdZSqJ5UZwv-8mKMgaX59Sih1Q
 Content-Type: application/json
 
 {
-  "name": "Tico",
-  "price": 12000,
+  "name": "O't ochirish Avtomabil ",
+  "price": 18000,
   "brend": "Chevrolet",
-  "description": "Legenda mashina",
-  "categoryId": 6,
+  "description": "O't ochirish Avtomabil",
+  "categoryId": 9,
   "status": "EXISTS",
-  "attachIds":  ["49ac95b4-dab9-4360-ae95-36f2ed267c81.jpeg"]
+  "attachIds":  ["54720dbe-1022-47ba-9516-662379610749.jpeg"]
 }
 
 ### Get by id
@@ -22,7 +22,7 @@ Content-Type: application/json
 
 ### Get filter
 GET http://localhost:8080/api/v1/products
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MjkwNDE4NzksImlkIjoiOGNiMWViOGUtYmQyZS00NDEzLWI0ZDEtYWRiMzUyNTViMTIxIiwidXNlcm5hbWUiOiIrOTk4OTQ1MDIyMTQ3Iiwicm9sZSI6IlJPTEVfQURNSU4iLCJyZWZyZXNoVG9rZW4iOmZhbHNlLCJleHAiOjE3MjkxMjgyNzksImlzcyI6IlN0YWRpdW0ifQ.ThXTvsKgGF93B8AUCfmYpTu5fxytmCafhboKFTHx5lj3zuIlSbLHHzj5j6t3lj9ZG3LFtdDLG0dBW6y99iX7BQ
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MjkwNzM5ODIsImlkIjoiOGNiMWViOGUtYmQyZS00NDEzLWI0ZDEtYWRiMzUyNTViMTIxIiwidXNlcm5hbWUiOiIrOTk4OTQ1MDIyMTQ3Iiwicm9sZSI6IlJPTEVfQURNSU4iLCJyZWZyZXNoVG9rZW4iOmZhbHNlLCJleHAiOjE3MjkxNjAzODIsImlzcyI6IlN0YWRpdW0ifQ.RLNFLntmU3HcsEKt5klNyS1C3BV-pZ_ZKT4CdNSWT_yRcXrSD4s8Q6yLjlCgAdZSqJ5UZwv-8mKMgaX59Sih1Q
 Content-Type: application/json
 
 {
@@ -30,6 +30,6 @@ Content-Type: application/json
   "price": null,
   "brend": null,
   "categoryId": null,
-  "parentId": 1,
+  "parentId": 2,
   "status": "EXISTS"
 }

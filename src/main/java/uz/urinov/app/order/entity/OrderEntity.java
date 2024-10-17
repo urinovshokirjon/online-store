@@ -2,6 +2,7 @@ package uz.urinov.app.order.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
+import org.hibernate.annotations.Cascade;
 import uz.urinov.app.order.enums.BookingStatus;
 import uz.urinov.base.config.audit_config.AuditEntity;
 
@@ -23,7 +24,8 @@ public class OrderEntity extends AuditEntity {
     @GeneratedValue(strategy = IDENTITY)
     private Long id;
 
-    @OneToMany(mappedBy = "orderId", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "order",cascade = CascadeType.ALL)
+//    @Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE})
     private List<OrderItemEntity> orderItemList;
 
     @Column(name = "total_price")

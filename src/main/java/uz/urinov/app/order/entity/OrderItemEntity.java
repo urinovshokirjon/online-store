@@ -32,9 +32,9 @@ public class OrderItemEntity extends AuditEntity {
     @Column(name = "product_count")
     private Integer productCount;
 
-    @Column(name = "order_id")
+    @Column(name = "order_id", insertable = false, updatable = false)
     private Long orderId;
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "order_id", insertable = false, updatable = false)
+    @JoinColumn(name = "order_id")
     private OrderEntity order;
 }

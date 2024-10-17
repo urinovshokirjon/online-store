@@ -7,6 +7,8 @@ import uz.urinov.app.category.entity.CategoryEntity;
 import java.util.Optional;
 
 public interface CategoryRepository extends JpaRepository<CategoryEntity, Long>, JpaSpecificationExecutor<CategoryEntity> {
+
+
     Optional<CategoryEntity> findByNameIgnoreCase(String name);
 
 

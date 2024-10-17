@@ -10,7 +10,7 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 @Entity
-@Table(name = "attach")
+@Table(name = "attachs")
 public class AttachEntity extends AuditEntity {
     @Id
     private String id;

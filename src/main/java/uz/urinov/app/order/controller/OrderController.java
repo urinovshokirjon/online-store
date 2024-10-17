@@ -36,7 +36,7 @@ public class OrderController {
 
     @GetMapping("/{id}")
     @Operation(summary = "Order by id", description = "Api for order by id")
-    public ResponseEntity<ApiResponse<OrderResponse>> getFoodOrder(@PathVariable("id") Long id) {
+    public ResponseEntity<ApiResponse<OrderResponse>> getOrder(@PathVariable("id") Long id) {
         return ResponseEntity.ok(orderService.getOrder(id));
     }
 
@@ -44,6 +44,12 @@ public class OrderController {
     @GetMapping()
     public ResponseEntity<ApiResponse<CustomPage<OrderResponse>>> getAll(@RequestBody OrderFilter filter){
         return ResponseEntity.ok().body(orderService.getAll(filter));
+    }
+
+    @DeleteMapping("/{id}")
+    @Operation(summary = "Order by id", description = "Api for order by id")
+    public ResponseEntity<ApiResponse<String>> deleteOrder(@PathVariable("id") Long id) {
+        return ResponseEntity.ok(orderService.deleteOrder(id));
     }
 
 

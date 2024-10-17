@@ -1,32 +1,44 @@
 ### Order create
 POST http://localhost:8080/api/v1/orders
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3Mjg4MTI5NjgsImlkIjoiOGNiMWViOGUtYmQyZS00NDEzLWI0ZDEtYWRiMzUyNTViMTIxIiwidXNlcm5hbWUiOiIrOTk4OTQ1MDIyMTQ3Iiwicm9sZSI6IlJPTEVfQURNSU4iLCJyZWZyZXNoVG9rZW4iOmZhbHNlLCJleHAiOjE3Mjg4OTkzNjgsImlzcyI6IlN0YWRpdW0ifQ.E3K3upUxtg0ZcmqhNlVi5d0TZF_XWNIoL5N55tgzJ-VrFKlmmwZ8A6EOR2eOu_RclOFGZyPcRWxpmp6Tj-BvaQ
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MjkwNzM5ODIsImlkIjoiOGNiMWViOGUtYmQyZS00NDEzLWI0ZDEtYWRiMzUyNTViMTIxIiwidXNlcm5hbWUiOiIrOTk4OTQ1MDIyMTQ3Iiwicm9sZSI6IlJPTEVfQURNSU4iLCJyZWZyZXNoVG9rZW4iOmZhbHNlLCJleHAiOjE3MjkxNjAzODIsImlzcyI6IlN0YWRpdW0ifQ.RLNFLntmU3HcsEKt5klNyS1C3BV-pZ_ZKT4CdNSWT_yRcXrSD4s8Q6yLjlCgAdZSqJ5UZwv-8mKMgaX59Sih1Q
 Content-Type: application/json
 
 {
   "productCountList": [
     {
-      "productId": 6,
+      "productId": 1,
+      "productsCount": 1
+    },
+    {
+      "productId": 2,
       "productsCount": 2
     },
     {
-      "productId": 10,
-      "productsCount": 1
+      "productId": 5,
+      "productsCount": 2
+    },
+    {
+      "productId": 6,
+      "productsCount": 2
     }
 
   ]
 }
 
 ###
-GET http://localhost:8080/api/v1/orders/1
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3Mjg5MDg1MjcsImlkIjoiOGNiMWViOGUtYmQyZS00NDEzLWI0ZDEtYWRiMzUyNTViMTIxIiwidXNlcm5hbWUiOiIrOTk4OTQ1MDIyMTQ3Iiwicm9sZSI6IlJPTEVfQURNSU4iLCJyZWZyZXNoVG9rZW4iOmZhbHNlLCJleHAiOjE3Mjg5OTQ5MjcsImlzcyI6IlN0YWRpdW0ifQ.g-fj41kOOijKgBc_TXTYh8V_e9suxa48b-Gl-lvMTlfL1GjpIK9KNNZyvtolbB66fDVY60SyuRpk0nJyeKjGDQ
+GET http://localhost:8080/api/v1/orders/2
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MjkwNzM5ODIsImlkIjoiOGNiMWViOGUtYmQyZS00NDEzLWI0ZDEtYWRiMzUyNTViMTIxIiwidXNlcm5hbWUiOiIrOTk4OTQ1MDIyMTQ3Iiwicm9sZSI6IlJPTEVfQURNSU4iLCJyZWZyZXNoVG9rZW4iOmZhbHNlLCJleHAiOjE3MjkxNjAzODIsImlzcyI6IlN0YWRpdW0ifQ.RLNFLntmU3HcsEKt5klNyS1C3BV-pZ_ZKT4CdNSWT_yRcXrSD4s8Q6yLjlCgAdZSqJ5UZwv-8mKMgaX59Sih1Q
 
 
 ###
 GET http://localhost:8080/api/v1/orders
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3Mjg4NzM4NzQsImlkIjoiOGNiMWViOGUtYmQyZS00NDEzLWI0ZDEtYWRiMzUyNTViMTIxIiwidXNlcm5hbWUiOiIrOTk4OTQ1MDIyMTQ3Iiwicm9sZSI6IlJPTEVfQURNSU4iLCJyZWZyZXNoVG9rZW4iOmZhbHNlLCJleHAiOjE3Mjg5NjAyNzQsImlzcyI6IlN0YWRpdW0ifQ.gCH3Q_4pN_xnWjv_BwIM3LVC_a8HWNUuiE2u1lMKIqGb7dOBQ_1zUM3qoFxPX2vx1Qff00PtUKV5jofWzZPptg
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MjkwNzM5ODIsImlkIjoiOGNiMWViOGUtYmQyZS00NDEzLWI0ZDEtYWRiMzUyNTViMTIxIiwidXNlcm5hbWUiOiIrOTk4OTQ1MDIyMTQ3Iiwicm9sZSI6IlJPTEVfQURNSU4iLCJyZWZyZXNoVG9rZW4iOmZhbHNlLCJleHAiOjE3MjkxNjAzODIsImlzcyI6IlN0YWRpdW0ifQ.RLNFLntmU3HcsEKt5klNyS1C3BV-pZ_ZKT4CdNSWT_yRcXrSD4s8Q6yLjlCgAdZSqJ5UZwv-8mKMgaX59Sih1Q
 Content-Type: application/json
 
 {
   "status": "CHECKING"
 }
+
+### Order delete
+DELETE http://localhost:8080/api/v1/orders/1
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MjkwNzM5ODIsImlkIjoiOGNiMWViOGUtYmQyZS00NDEzLWI0ZDEtYWRiMzUyNTViMTIxIiwidXNlcm5hbWUiOiIrOTk4OTQ1MDIyMTQ3Iiwicm9sZSI6IlJPTEVfQURNSU4iLCJyZWZyZXNoVG9rZW4iOmZhbHNlLCJleHAiOjE3MjkxNjAzODIsImlzcyI6IlN0YWRpdW0ifQ.RLNFLntmU3HcsEKt5klNyS1C3BV-pZ_ZKT4CdNSWT_yRcXrSD4s8Q6yLjlCgAdZSqJ5UZwv-8mKMgaX59Sih1Q

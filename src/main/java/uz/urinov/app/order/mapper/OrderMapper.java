@@ -2,18 +2,11 @@ package uz.urinov.app.order.mapper;
 
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
-import uz.urinov.app.Attach.repository.AttachRepository;
-import uz.urinov.app.category.dto.CategoryResponseDto;
-import uz.urinov.app.category.entity.CategoryEntity;
 import uz.urinov.app.order.dto.OrderItemResponseDto;
 import uz.urinov.app.order.dto.OrderResponse;
 import uz.urinov.app.order.entity.OrderEntity;
 import uz.urinov.app.order.entity.OrderItemEntity;
-import uz.urinov.app.product.dto.ProductCreateDto;
-import uz.urinov.app.product.dto.ProductResponseDto;
-import uz.urinov.app.product.entity.ProductEntity;
 import uz.urinov.base.util.CustomPage;
 
 import java.util.List;
@@ -22,6 +15,7 @@ import java.util.List;
 public abstract class OrderMapper {
 
 
+    @Mapping(target = "productsCount", source = "productsCount")
     public abstract OrderResponse toDto(OrderEntity entity);
 
 

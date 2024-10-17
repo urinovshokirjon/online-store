@@ -14,4 +14,6 @@ public interface OrderService {
     ApiResponse<OrderResponse> getOrder(Long id);
 
     ApiResponse<CustomPage<OrderResponse>> getAll(OrderFilter filter);
+
+    ApiResponse<String> deleteOrder(Long id);
 }
